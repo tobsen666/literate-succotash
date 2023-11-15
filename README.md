@@ -1,2 +1,2 @@
 # literate-succotash
-Simple CI project with a C build
+Simple CI project for a C build
