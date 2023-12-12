@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('Build .dll') {
+    stage('Checkout Code') {
       steps {
-        sh 'gcc -shared -o addition.dll addition.c'
+        git(url: 'https://github.com/tobsen666/literate-succotash', branch: 'main')
       }
     }
 
