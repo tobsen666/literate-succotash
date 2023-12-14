@@ -16,6 +16,12 @@ pipeline {
     stage('Pytest') {
       steps {
         bat 'pytest --html=report.html addition_testing_c.py > pytest_output.log 2>&1'
+
+        // Capture the exit code of the Pytest command
+        def result = bat(script: 'echo %ERRORLEVEL%', returnStatus: true)
+            
+        // Print the result to the Jenkins console
+        echo "Pytest command exit code: ${result}"
       }
     }
 
