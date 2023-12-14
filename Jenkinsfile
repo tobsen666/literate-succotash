@@ -9,9 +9,7 @@ pipeline {
 
     stage('Build .dll') {
       steps {
-        sh '''cd \${WORKSPACE}
-        gcc -shared -o addition.dll add.c
-        '''
+        bat 'build-dll.bat'
       }
     }
 
