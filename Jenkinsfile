@@ -13,5 +13,11 @@ pipeline {
       }
     }
 
+    stage('Pytest') {
+      steps {
+        bat 'pytest'
+      }
+    }
+
   }
 }
