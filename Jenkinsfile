@@ -9,7 +9,7 @@ pipeline {
 
     stage('Build .dll') {
       steps {
-        bat 'build-dll.bat'
+        bat 'build-dll'
       }
     }
 
