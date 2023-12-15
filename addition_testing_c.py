@@ -2,6 +2,7 @@
 import ctypes
 import os
 import pytest
+from pathlib import Path
 
 # Load the C library
 #lib_path = os.path.join(os.path.dirname(__file__), 'addition.dll')  # Change to 'addition.so' on Linux
