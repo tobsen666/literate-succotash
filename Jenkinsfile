@@ -15,8 +15,9 @@ pipeline {
 
     stage('Pytest') {
       steps {
-        bat 'pytest --html=report.html addition_testing_c.py'
+        bat 'pytest --html=report.html -v addition_testing_c.py'
       }
     }
+
   }
 }
