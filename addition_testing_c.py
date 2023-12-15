@@ -4,8 +4,9 @@ import os
 import pytest
 
 # Load the C library
-lib_path = os.path.join(os.path.dirname(__file__), 'addition.dll')  # Change to 'addition.so' on Linux
-addition = ctypes.CDLL(lib_path)
+#lib_path = os.path.join(os.path.dirname(__file__), 'addition.dll')  # Change to 'addition.so' on Linux
+dll_path = str(Path(__file__).resolve().parent / 'addition.dll')
+addition = ctypes.CDLL(dll_path)
 
 def test_addition_case1():
     result = addition.addition(2, 3)
